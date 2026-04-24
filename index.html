@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
   <title>Cloud Global | Infraestructura y Soluciones IT Enterprise</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -225,23 +227,11 @@
     }
 
     .nav-link {
-      position: relative;
       font-size: var(--text-sm);
-      font-weight: 600;
+      font-weight: 500;
       color: var(--color-text-muted);
-      transition: color .2s ease;
+      transition: color .15s ease;
       padding: var(--space-1) 0;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--color-primary);
-      transition: width 0.3s ease;
     }
 
     .nav-link:hover {
@@ -249,24 +239,22 @@
     }
 
     .nav-link.active {
-      color: var(--color-primary);
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
+      color: var(--color-text);
+      font-weight: 700;
     }
 
     .theme-toggle {
-      width: 38px;
       height: 38px;
+      padding: 0 var(--space-4);
       border-radius: 8px;
       display: grid;
       place-items: center;
       background: var(--color-surface-2);
       transition: all 0.2s ease;
-      font-size: 1rem;
+      font-size: var(--text-xs);
+      font-weight: 600;
       color: var(--color-text-muted);
+      white-space: nowrap;
     }
 
     .theme-toggle:hover {
@@ -414,7 +402,8 @@
 
     .metrics {
       display: flex;
-      gap: var(--space-8);
+      flex-wrap: wrap;
+      gap: var(--space-6) var(--space-8);
       margin-top: var(--space-12);
       padding: var(--space-6) 0;
       border-top: 1px solid var(--color-divider);
@@ -686,6 +675,16 @@
       align-items: start;
     }
 
+    .form-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+
+    .contact-panel {
+      margin-top: var(--space-20);
+    }
+
     .contact-form {
       display: grid;
       gap: var(--space-5);
@@ -830,6 +829,14 @@
         grid-template-columns: 1fr;
       }
 
+      .form-two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-panel {
+        margin-top: var(--space-8);
+      }
+
       .footer-inner {
         flex-direction: column;
         text-align: center;
@@ -843,14 +850,6 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#inicio" data-page-link="inicio" aria-label="Cloud Global inicio">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path
-              d="M17.5 19a3.5 3.5 0 0 0 0-7c-.3 0-.6 0-.8.1a5.5 5.5 0 1 0-10.4 0c-.2-.1-.5-.1-.8-.1a3.5 3.5 0 0 0 0 7h12z">
-            </path>
-          </svg>
-        </span>
         <span class="brand-text">Cloud Global<small>Enterprise Solutions</small></span>
       </a>
       <nav class="nav" aria-label="Principal">
@@ -860,7 +859,7 @@
           <a class="nav-link" href="#ventajas" data-page-link="ventajas">Ventajas</a>
           <a class="nav-link" href="#contacto" data-page-link="contacto">Contacto</a>
         </div>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema">☀️</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema">Dark Mode</button>
       </nav>
     </div>
   </header>
@@ -1104,7 +1103,7 @@
           <form class="contact-form" action="https://formsubmit.co/mail@cloudglobal.es" method="POST">
             <input type="hidden" name="_subject" value="Nueva Solicitud Técnica — Cloud Global">
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+            <div class="form-two-col">
               <div class="form-group">
                 <label for="nombre">Nombre Completo</label>
                 <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Juan Pérez" required>
@@ -1128,7 +1127,7 @@
           </form>
         </div>
 
-        <div class="panel" style="margin-top: var(--space-20);">
+        <div class="panel contact-panel">
           <h2 style="margin-bottom: var(--space-8); font-size: 1.25rem;">Información Directa</h2>
           <div class="contact-info-list">
             <div class="contact-item">
@@ -1191,14 +1190,6 @@
         style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-3);">
         <div style="display: flex; align-items: center; gap: var(--space-4);">
           <div class="brand" style="font-size: 0.8rem;">
-            <span class="brand-mark" style="width: 24px; height: 24px; border-radius: 4px;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M17.5 19a3.5 3.5 0 0 0 0-7c-.3 0-.6 0-.8.1a5.5 5.5 0 1 0-10.4 0c-.2-.1-.5-.1-.8-.1a3.5 3.5 0 0 0 0 7h12z">
-                </path>
-              </svg>
-            </span>
             <span>Cloud Global</span>
           </div>
           <div class="footer-copy" style="font-size: 0.65rem; opacity: 0.7;">
@@ -1235,7 +1226,7 @@
       function paintTheme() {
         root.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        if (toggle) toggle.innerHTML = theme === 'dark' ? '<span aria-hidden="true">🌙</span>' : '<span aria-hidden="true">☀️</span>';
+        if (toggle) toggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
       }
 
       paintTheme();
