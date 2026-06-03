@@ -225,16 +225,23 @@
       background: var(--color-surface); border: 1px solid var(--color-border);
       border-radius: var(--radius-lg); overflow: hidden;
       display: flex; flex-direction: column;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative;
+      transition: all 0.3s ease; position: relative;
     }
-    .card:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-xl); border-color: var(--color-primary); }
+    .card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-lg); }
     .card-image { width: 100%; height: 160px; overflow: hidden; }
-    .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: brightness(0.92); }
-    .card:hover .card-image img { transform: scale(1.06); filter: brightness(1); }
+    .card-image img { width: 100%; height: 100%; object-fit: cover; }
     .card-content { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); flex-grow: 1; }
     .card-content h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0; }
     .card-content p { font-size: 0.85rem; line-height: 1.5; }
     .card-top { margin-bottom: var(--space-1); }
+
+    #page-partners .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 600px) { #page-partners .cards-grid { grid-template-columns: 1fr; } }
+    #page-partners .card { min-height: 300px; }
+    #page-partners .card-content { padding: var(--space-8) var(--space-10); justify-content: center; gap: var(--space-4); }
+    #page-partners .card-content h2 { font-size: 1.25rem; }
+    #page-partners .card-content p { font-size: 0.9rem; line-height: 1.6; }
+    #page-partners .card-top { margin-bottom: var(--space-2); }
     .tag { padding: .4rem .75rem; border-radius: var(--radius-full); background: var(--color-surface-2); font-size: 0.7rem; font-weight: 800; color: var(--color-primary); text-transform: uppercase; letter-spacing: .1em; border: 1px solid var(--color-border); }
 
     .features { list-style: none; display: grid; gap: var(--space-3); margin-top: auto; }
@@ -281,6 +288,28 @@
     .footer-link { font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); transition: color 0.2s ease; }
     .footer-link:hover { color: var(--color-primary); }
 
+    .auth-box { max-width: 500px; margin: 0 auto; padding: var(--space-12); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .auth-box h2 { text-align: center; margin-bottom: var(--space-2); }
+    .auth-box p { text-align: center; }
+    .auth-box .form-group { margin-bottom: var(--space-4); }
+    .auth-box label { display: block; font-weight: 600; font-size: var(--text-sm); margin-bottom: var(--space-2); color: var(--color-text); }
+    .auth-box .form-input { width: 100%; padding: var(--space-3) var(--space-4); border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-bg); color: var(--color-text); font-family: inherit; font-size: var(--text-sm); }
+    .auth-box .form-input:focus { outline: none; border-color: var(--color-primary); }
+    .auth-box .btn { width: 100%; min-height: 48px; margin-top: var(--space-2); }
+    .auth-error { color: #ef4444; font-size: var(--text-sm); text-align: center; margin-top: var(--space-3); display: none; }
+    .partner-tabs { display: flex; gap: var(--space-1); margin-bottom: var(--space-8); border-bottom: 1px solid var(--color-border); padding-bottom: 0; }
+    .partner-tabs a { padding: var(--space-3) var(--space-5); font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s; }
+    .partner-tabs a:hover { color: var(--color-text); }
+    .partner-tabs a.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+    .partner-stat { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+    .partner-stat strong { display: block; font-size: 1.75rem; font-weight: 800; color: var(--color-text); margin-bottom: var(--space-1); }
+    .partner-stat span { font-size: var(--text-xs); color: var(--color-text-muted); }
+    .partner-resource { padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-bottom: var(--space-3); transition: border-color 0.2s; }
+    .partner-resource:hover { border-color: var(--color-primary); }
+    .partner-resource h4 { font-size: var(--text-base); font-weight: 600; margin-bottom: var(--space-1); }
+    .partner-resource p { font-size: var(--text-sm); color: var(--color-text-muted); }
+    @media (max-width: 760px) { .partner-tabs { overflow-x: auto; } }
+
     @media (max-width:1080px) {
       .hero-grid, .two-col, .cta-box { grid-template-columns: 1fr; gap: var(--space-12); }
       .hero-grid>div:first-child { order: 2; }
@@ -314,6 +343,7 @@
           <a class="nav-link" href="#ventajas" data-page-link="ventajas" data-i18n="nav.benefits">Ventajas</a>
           <a class="nav-link" href="#partners" data-page-link="partners" data-i18n="nav.partners">Partners</a>
           <a class="nav-link" href="#contacto" data-page-link="contacto" data-i18n="nav.contact">Contacto</a>
+          <a class="nav-link" href="#partner-login" data-page-link="partner-login" data-i18n="nav.portal" style="color:var(--color-primary);font-weight:700;">Portal Partner</a>
         </div>
         <div class="nav-controls">
           <select class="lang-select" aria-label="Idioma" id="lang-select">
@@ -554,7 +584,6 @@
 
       <div class="cards-grid">
         <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=600&q=80&auto=format&fit=crop" alt="Integradores y Partners"></div>
           <div class="card-content">
             <div class="card-top"><span class="tag" data-i18n="part1.tag">Alianzas</span></div>
             <h2 data-i18n="part1.title">Integradores y Partners</h2>
@@ -568,7 +597,6 @@
         </article>
 
         <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop" alt="Servicios Profesionales"></div>
           <div class="card-content">
             <div class="card-top"><span class="tag" data-i18n="part2.tag">Soporte</span></div>
             <h2 data-i18n="part2.title">Servicios Profesionales</h2>
@@ -582,7 +610,6 @@
         </article>
 
         <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=600&q=80&auto=format&fit=crop" alt="Prescripción de Clientes"></div>
           <div class="card-content">
             <div class="card-top"><span class="tag" data-i18n="part3.tag">Beneficios</span></div>
             <h2 data-i18n="part3.title">Prescripción de Clientes</h2>
@@ -595,8 +622,7 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Portal de Partner"></div>
+        <a class="card" href="#partner-login" data-page-link="partner-login" style="cursor:pointer;">
           <div class="card-content">
             <div class="card-top"><span class="tag" data-i18n="part4.tag">Plataforma</span></div>
             <h2 data-i18n="part4.title">Portal de Partner</h2>
@@ -607,10 +633,9 @@
               <li data-i18n="part4.f3">Documentación técnica</li>
             </ul>
           </div>
-        </article>
+        </a>
 
         <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80&auto=format&fit=crop" alt="Apoyo y Formación Continua"></div>
           <div class="card-content">
             <div class="card-top"><span class="tag" data-i18n="part5.tag">Desarrollo</span></div>
             <h2 data-i18n="part5.title">Apoyo y Formación Continua</h2>
@@ -624,7 +649,6 @@
         </article>
 
         <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&auto=format&fit=crop" alt="Alianzas Tecnológicas"></div>
           <div class="card-content">
             <div class="card-top"><span class="tag" data-i18n="part6.tag">Fabricantes</span></div>
             <h2 data-i18n="part6.title">Alianzas Tecnológicas</h2>
@@ -708,6 +732,112 @@
       </div>
     </section>
 
+    <!-- PARTNER LOGIN -->
+    <section class="page" id="page-partner-login" aria-labelledby="titulo-partner-login">
+      <div class="container" style="display:grid;place-items:center;min-height:60vh;">
+        <div class="auth-box">
+          <h2 id="titulo-partner-login" data-i18n="portal.loginTitle">Acceso Partners</h2>
+          <p class="muted" data-i18n="portal.loginDesc">Introduce tus credenciales para acceder al portal.</p>
+          <form id="partner-login-form" style="margin-top:var(--space-6);">
+            <div class="form-group">
+              <label for="partner-email" data-i18n="portal.email">Email corporativo</label>
+              <input type="email" id="partner-email" class="form-input" placeholder="mail@empresa.com" required>
+            </div>
+            <div class="form-group">
+              <label for="partner-pass" data-i18n="portal.pass">Contraseña</label>
+              <input type="password" id="partner-pass" class="form-input" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="portal.loginBtn">Acceder al portal</button>
+            <div class="auth-error" id="partner-auth-error" data-i18n="portal.error">Credenciales incorrectas.</div>
+          </form>
+          <p style="text-align:center;margin-top:var(--space-4);font-size:var(--text-xs);color:var(--color-text-faint);" data-i18n="portal.demoHint">Demo: contraseña "partner"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNER DASHBOARD -->
+    <section class="page" id="page-partner-dashboard" aria-labelledby="titulo-partner-dashboard">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-4);margin-bottom:var(--space-8);">
+          <div style="display:flex;align-items:center;gap:var(--space-4);">
+            <h1 id="titulo-partner-dashboard" class="lead" style="margin:0;font-size:var(--text-lg);font-weight:700;" data-i18n="portal.dashTitle">Panel de Control</h1>
+            <span style="font-size:var(--text-xs);color:var(--color-text-faint);" id="partner-email-display">partner@email.com</span>
+          </div>
+          <button class="btn btn-secondary" id="partner-logout-btn" style="min-height:36px;padding:0 var(--space-4);font-size:var(--text-xs);">
+            <span data-i18n="portal.logout">Cerrar sesión</span>
+          </button>
+        </div>
+
+        <div class="partner-tabs">
+          <a href="#" class="active" data-tab="overview" data-i18n="portal.mOverview">Resumen</a>
+          <a href="#" data-tab="resources" data-i18n="portal.mResources">Recursos</a>
+          <a href="#" data-tab="training" data-i18n="portal.mTraining">Formación</a>
+          <a href="#" data-tab="support" data-i18n="portal.mSupport">Soporte</a>
+        </div>
+
+        <div id="tab-overview">
+          <h2 data-i18n="portal.overviewTitle">Bienvenido al Portal de Partner</h2>
+          <p class="muted" style="margin-bottom:var(--space-6);max-width:640px;" data-i18n="portal.overviewDesc">Aquí encontrarás todo lo necesario para impulsar tu negocio con Cloud Global.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-4);">
+            <div class="partner-stat"><strong>12</strong><span data-i18n="portal.stat1">Proyectos activos</span></div>
+            <div class="partner-stat"><strong>€4.2K</strong><span data-i18n="portal.stat2">Comisiones este mes</span></div>
+            <div class="partner-stat"><strong>5</strong><span data-i18n="portal.stat3">Cursos disponibles</span></div>
+          </div>
+        </div>
+
+        <div id="tab-resources" style="display:none;">
+          <h2 data-i18n="portal.resTitle">Recursos Comerciales</h2>
+          <p class="muted" style="margin-bottom:var(--space-6);" data-i18n="portal.resDesc">Material de ventas, fichas técnicas y presentaciones.</p>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.res1Title">Catálogo de Soluciones</h4>
+            <p data-i18n="portal.res1Desc">Fichas técnicas completas de todos nuestros servicios.</p>
+          </div>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.res2Title">Presentación Corporativa</h4>
+            <p data-i18n="portal.res2Desc">Deck comercial actualizado para presentar a clientes.</p>
+          </div>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.res3Title">Casos de Éxito</h4>
+            <p data-i18n="portal.res3Desc">Ejemplos reales de proyectos con clientes.</p>
+          </div>
+        </div>
+
+        <div id="tab-training" style="display:none;">
+          <h2 data-i18n="portal.trainTitle">Formación y Certificaciones</h2>
+          <p class="muted" style="margin-bottom:var(--space-6);" data-i18n="portal.trainDesc">Cursos online, webinars y certificaciones oficiales.</p>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.train1Title">Webinars Mensuales</h4>
+            <p data-i18n="portal.train1Desc">Sesiones en vivo sobre productos y tendencias.</p>
+          </div>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.train2Title">Cursos On-Demand</h4>
+            <p data-i18n="portal.train2Desc">Accede a la biblioteca de formación cuando quieras.</p>
+          </div>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.train3Title">Certificaciones Oficiales</h4>
+            <p data-i18n="portal.train3Desc">Prepárate para las certificaciones oficiales.</p>
+          </div>
+        </div>
+
+        <div id="tab-support" style="display:none;">
+          <h2 data-i18n="portal.supTitle">Soporte al Partner</h2>
+          <p class="muted" style="margin-bottom:var(--space-6);" data-i18n="portal.supDesc">¿Necesitas ayuda? Estamos aquí para ti.</p>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.sup1Title">Chat con Expertos</h4>
+            <p data-i18n="portal.sup1Desc">Conecta directamente con nuestro equipo técnico.</p>
+          </div>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.sup2Title">Ticket de Soporte</h4>
+            <p data-i18n="portal.sup2Desc">Abre un ticket y te responderemos en menos de 24h.</p>
+          </div>
+          <div class="partner-resource">
+            <h4 data-i18n="portal.sup3Title">Centro de Ayuda</h4>
+            <p data-i18n="portal.sup3Desc">Guías, FAQs y documentación técnica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -787,9 +917,26 @@
                     'part4.tag': 'Plataforma', 'part4.title': 'Portal de Partner', 'part4.desc': 'Accede a una plataforma con webinars mensuales, guías paso a paso y un chat directo con nuestros expertos para impulsar tus ventas.', 'part4.f1': 'Webinars mensuales', 'part4.f2': 'Guías paso a paso', 'part4.f3': 'Chat con expertos',
                     'part5.tag': 'Desarrollo', 'part5.title': 'Apoyo y Formación Continua', 'part5.desc': 'Ofrecemos cursos presenciales y online, certificaciones reconocidas y un panel de soporte técnico para que tu equipo domine nuestras soluciones.', 'part5.f1': 'Cursos presenciales y online', 'part5.f2': 'Certificaciones oficiales', 'part5.f3': 'Soporte técnico continuo',
                     'part6.tag': 'Fabricantes', 'part6.title': 'Alianzas Tecnológicas', 'part6.desc': 'Trabajamos con fabricantes como Dell y Cisco para ofrecer a nuestros partners productos de última generación y pruebas beta exclusivas.', 'part6.f1': 'Acceso a productos de vanguardia', 'part6.f2': 'Pruebas beta exclusivas', 'part6.f3': 'Soporte de marca dedicado',
-          'nav.partners': 'Partners',
+          'nav.partners': 'Partners', 'nav.portal': 'Portal Partner',
           'con.loc.label': 'Ubicación', 'con.loc.addr1': 'Calle las Palomas n 50, Urb EL Coto', 'con.loc.addr2': 'Mijas Costa, Málaga, España.',
           'footer.services': 'Servicios', 'footer.methodology': 'Metodología', 'footer.contact': 'Contacto',
+          'portal.loginTitle': 'Acceso Partners', 'portal.loginDesc': 'Introduce tus credenciales para acceder al portal de partner.', 'portal.email': 'Email corporativo', 'portal.pass': 'Contraseña', 'portal.loginBtn': 'Acceder al portal', 'portal.error': 'Credenciales incorrectas. Inténtalo de nuevo.', 'portal.demoHint': 'Demo: usa cualquier email y contraseña "partner"',
+          'portal.dashEyebrow': 'Portal de Partner', 'portal.dashTitle': 'Panel de Control', 'portal.logout': 'Cerrar sesión', 'portal.menu': 'Menú',
+          'portal.mOverview': 'Resumen', 'portal.mResources': 'Recursos', 'portal.mTraining': 'Formación', 'portal.mSupport': 'Soporte',
+          'portal.overviewTitle': 'Bienvenido al Portal de Partner', 'portal.overviewDesc': 'Aquí encontrarás todo lo necesario para impulsar tu negocio con Cloud Global.',
+          'portal.stat1': 'Proyectos activos', 'portal.stat2': 'Comisiones este mes', 'portal.stat3': 'Cursos disponibles',
+          'portal.resTitle': 'Recursos Comerciales', 'portal.resDesc': 'Material de ventas, fichas técnicas y presentaciones.',
+          'portal.res1Title': 'Catálogo de Soluciones', 'portal.res1Desc': 'Fichas técnicas completas de todos nuestros servicios.',
+          'portal.res2Title': 'Presentación Corporativa', 'portal.res2Desc': 'Deck comercial actualizado para presentar a clientes.',
+          'portal.res3Title': 'Casos de Éxito', 'portal.res3Desc': 'Ejemplos reales de proyectos con clientes.',
+          'portal.trainTitle': 'Formación y Certificaciones', 'portal.trainDesc': 'Cursos online, webinars y certificaciones oficiales.',
+          'portal.train1Title': 'Webinars Mensuales', 'portal.train1Desc': 'Sesiones en vivo sobre productos y tendencias.',
+          'portal.train2Title': 'Cursos On-Demand', 'portal.train2Desc': 'Accede a la biblioteca de formación cuando quieras.',
+          'portal.train3Title': 'Certificaciones Oficiales', 'portal.train3Desc': 'Prepárate para las certificaciones oficiales.',
+          'portal.supTitle': 'Soporte al Partner', 'portal.supDesc': '¿Necesitas ayuda? Estamos aquí para ti.',
+          'portal.sup1Title': 'Chat con Expertos', 'portal.sup1Desc': 'Conecta directamente con nuestro equipo técnico.',
+          'portal.sup2Title': 'Ticket de Soporte', 'portal.sup2Desc': 'Abre un ticket y te responderemos en menos de 24h.',
+          'portal.sup3Title': 'Centro de Ayuda', 'portal.sup3Desc': 'Guías, FAQs y documentación técnica.',
           title: 'Cloud Global | Infraestructura y Soluciones IT Enterprise',
         },
         en: {
@@ -839,9 +986,26 @@
                     'part4.tag': 'Platform', 'part4.title': 'Partner Portal', 'part4.desc': 'Access a portal featuring monthly webinars, step‑by‑step guides, and a direct chat with experts to boost your sales.', 'part4.f1': 'Monthly webinars', 'part4.f2': 'Step‑by‑step guides', 'part4.f3': 'Expert chat',
                     'part5.tag': 'Development', 'part5.title': 'Continuous Training', 'part5.desc': 'We provide in‑person and online courses, recognized certifications, and a technical support panel so your team masters our solutions.', 'part5.f1': 'In‑person and online courses', 'part5.f2': 'Official certifications', 'part5.f3': 'Continuous technical support',
                     'part6.tag': 'Vendors', 'part6.title': 'Technology Alliances', 'part6.desc': 'We partner with leading vendors like Dell and Cisco to give partners access to cutting‑edge products and exclusive beta testing.', 'part6.f1': 'Access to cutting‑edge products', 'part6.f2': 'Exclusive beta testing', 'part6.f3': 'Dedicated brand support',
-          'nav.partners': 'Partners',
+          'nav.partners': 'Partners', 'nav.portal': 'Partner Portal',
           'con.loc.label': 'Location', 'con.loc.addr1': 'Calle las Palomas n 50, Urb EL Coto', 'con.loc.addr2': 'Mijas Costa, Málaga, Spain.',
           'footer.services': 'Services', 'footer.methodology': 'Methodology', 'footer.contact': 'Contact',
+          'portal.loginTitle': 'Partner Access', 'portal.loginDesc': 'Enter your credentials to access the partner portal.', 'portal.email': 'Business email', 'portal.pass': 'Password', 'portal.loginBtn': 'Access portal', 'portal.error': 'Invalid credentials. Try again.', 'portal.demoHint': 'Demo: use any email and password "partner"',
+          'portal.dashEyebrow': 'Partner Portal', 'portal.dashTitle': 'Dashboard', 'portal.logout': 'Log out', 'portal.menu': 'Menu',
+          'portal.mOverview': 'Overview', 'portal.mResources': 'Resources', 'portal.mTraining': 'Training', 'portal.mSupport': 'Support',
+          'portal.overviewTitle': 'Welcome to the Partner Portal', 'portal.overviewDesc': 'Find everything you need to grow your business with Cloud Global.',
+          'portal.stat1': 'Active projects', 'portal.stat2': 'Commissions this month', 'portal.stat3': 'Available courses',
+          'portal.resTitle': 'Sales Resources', 'portal.resDesc': 'Sales material, technical sheets and presentations.',
+          'portal.res1Title': 'Solutions Catalog', 'portal.res1Desc': 'Complete technical sheets of all our services.',
+          'portal.res2Title': 'Corporate Presentation', 'portal.res2Desc': 'Updated sales deck to present to clients.',
+          'portal.res3Title': 'Success Stories', 'portal.res3Desc': 'Real project examples with clients.',
+          'portal.trainTitle': 'Training & Certifications', 'portal.trainDesc': 'Online courses, webinars and official certifications.',
+          'portal.train1Title': 'Monthly Webinars', 'portal.train1Desc': 'Live sessions on products and trends.',
+          'portal.train2Title': 'On-Demand Courses', 'portal.train2Desc': 'Access the training library anytime.',
+          'portal.train3Title': 'Official Certifications', 'portal.train3Desc': 'Prepare for official certifications.',
+          'portal.supTitle': 'Partner Support', 'portal.supDesc': 'Need help? We are here for you.',
+          'portal.sup1Title': 'Expert Chat', 'portal.sup1Desc': 'Connect directly with our technical team.',
+          'portal.sup2Title': 'Support Ticket', 'portal.sup2Desc': 'Open a ticket and get a reply within 24h.',
+          'portal.sup3Title': 'Help Center', 'portal.sup3Desc': 'Guides, FAQs and technical documentation.',
           title: 'Cloud Global | Cloud Infrastructure & Enterprise IT Solutions',
         },
         fr: {
@@ -891,9 +1055,26 @@
                     'part4.tag': 'Plateforme', 'part4.title': 'Portail Partenaire', 'part4.desc': 'Accédez à une plateforme contenant des webinars mensuels, des guides pas à pas et un chat direct avec nos experts pour booster vos ventes.', 'part4.f1': 'Webinars mensuels', 'part4.f2': 'Guides pas à pas', 'part4.f3': 'Chat avec experts',
           'part5.tag': 'Développement', 'part5.title': 'Formation Continue', 'part5.desc': 'Nous ne vous laissons pas seul. Nous vous accompagnons avec une formation constante pour maîtriser nos solutions.', 'part5.f1': 'Ateliers pratiques', 'part5.f2': 'Certifications officielles', 'part5.f3': 'Accompagnement technique',
                     'part6.tag': 'Fournisseurs', 'part6.title': 'Alliances Technologiques', 'part6.desc': 'Nous collaborons avec des fournisseurs tels que Dell et Cisco pour offrir à nos partenaires des produits de pointe et des tests beta exclusifs.', 'part6.f1': 'Accès à des produits de pointe', 'part6.f2': 'Tests beta exclusifs', 'part6.f3': 'Support de marque dédié',
-          'nav.partners': 'Partenaires',
+          'nav.partners': 'Partenaires', 'nav.portal': 'Portail Partenaire',
           'con.loc.label': 'Localisation', 'con.loc.addr1': 'Calle las Palomas n 50, Urb EL Coto', 'con.loc.addr2': 'Mijas Costa, Málaga, Espagne.',
           'footer.services': 'Services', 'footer.methodology': 'Méthodologie', 'footer.contact': 'Contact',
+          'portal.loginTitle': 'Accès Partenaires', 'portal.loginDesc': 'Entrez vos identifiants pour accéder au portail partenaire.', 'portal.email': 'Email professionnel', 'portal.pass': 'Mot de passe', 'portal.loginBtn': 'Accéder au portail', 'portal.error': 'Identifiants incorrects. Réessayez.', 'portal.demoHint': 'Démo : utilisez n\'importe quel email et le mot de passe "partner"',
+          'portal.dashEyebrow': 'Portail Partenaire', 'portal.dashTitle': 'Tableau de Bord', 'portal.logout': 'Déconnexion', 'portal.menu': 'Menu',
+          'portal.mOverview': 'Aperçu', 'portal.mResources': 'Ressources', 'portal.mTraining': 'Formation', 'portal.mSupport': 'Support',
+          'portal.overviewTitle': 'Bienvenue sur le Portail Partenaire', 'portal.overviewDesc': 'Trouvez tout ce dont vous avez besoin pour développer votre activité avec Cloud Global.',
+          'portal.stat1': 'Projets actifs', 'portal.stat2': 'Commissions ce mois', 'portal.stat3': 'Cours disponibles',
+          'portal.resTitle': 'Ressources Commerciales', 'portal.resDesc': 'Documents de vente, fiches techniques et présentations.',
+          'portal.res1Title': 'Catalogue de Solutions', 'portal.res1Desc': 'Fiches techniques complètes de tous nos services.',
+          'portal.res2Title': 'Présentation Corporate', 'portal.res2Desc': 'Deck commercial mis à jour pour présenter aux clients.',
+          'portal.res3Title': 'Cas de Succès', 'portal.res3Desc': 'Exemples réels de projets avec des clients.',
+          'portal.trainTitle': 'Formation & Certifications', 'portal.trainDesc': 'Cours en ligne, webinars et certifications officielles.',
+          'portal.train1Title': 'Webinars Mensuels', 'portal.train1Desc': 'Sessions en direct sur les produits et tendances.',
+          'portal.train2Title': 'Cours à la Demande', 'portal.train2Desc': 'Accédez à la bibliothèque de formation quand vous voulez.',
+          'portal.train3Title': 'Certifications Officielles', 'portal.train3Desc': 'Préparez les certifications officielles.',
+          'portal.supTitle': 'Support Partenaire', 'portal.supDesc': 'Besoin d\'aide ? Nous sommes là pour vous.',
+          'portal.sup1Title': 'Chat avec Experts', 'portal.sup1Desc': 'Connectez-vous directement avec notre équipe technique.',
+          'portal.sup2Title': 'Ticket de Support', 'portal.sup2Desc': 'Ouvrez un ticket et obtenez une réponse sous 24h.',
+          'portal.sup3Title': 'Centre d\'Aide', 'portal.sup3Desc': 'Guides, FAQ et documentation technique.',
           title: 'Cloud Global | Infrastructure Cloud & Solutions IT Enterprise',
         }
       };
@@ -939,11 +1120,72 @@
         paintTheme();
       });
 
+      // ── PARTNER PORTAL ────────────────────────────────────────────────────
+      const loginForm = document.getElementById('partner-login-form');
+      const authError = document.getElementById('partner-auth-error');
+      const logoutBtn = document.getElementById('partner-logout-btn');
+      const partnerEmail = document.getElementById('partner-email-display');
+
+      function isPartnerLoggedIn() { return localStorage.getItem('partner_logged_in') === 'true'; }
+
+      function showPartnerDashboard() {
+        const data = JSON.parse(localStorage.getItem('partner_data') || '{}');
+        if (partnerEmail) partnerEmail.textContent = data.email || 'partner@email.com';
+        history.pushState(null, '', '#partner-dashboard');
+        openPage('partner-dashboard');
+      }
+
+      if (loginForm) {
+        loginForm.addEventListener('submit', e => {
+          e.preventDefault();
+          const email = document.getElementById('partner-email').value.trim();
+          const pass = document.getElementById('partner-pass').value;
+          if (pass === 'partner') {
+            const name = email.split('@')[0].replace(/[._-]/g, ' ');
+            const displayName = name.charAt(0).toUpperCase() + name.slice(1);
+            localStorage.setItem('partner_logged_in', 'true');
+            localStorage.setItem('partner_data', JSON.stringify({ name: displayName, email }));
+            if (authError) authError.style.display = 'none';
+            showPartnerDashboard();
+          } else {
+            if (authError) authError.style.display = 'block';
+          }
+        });
+      }
+
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+          localStorage.removeItem('partner_logged_in');
+          localStorage.removeItem('partner_data');
+          history.pushState(null, '', '#partner-login');
+          openPage('partner-login');
+        });
+      }
+
+      // Tab switching in dashboard
+      document.querySelectorAll('[data-tab]').forEach(tab => {
+        tab.addEventListener('click', e => {
+          e.preventDefault();
+          const tabName = tab.dataset.tab;
+          document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          document.querySelectorAll('#page-partner-dashboard [id^="tab-"]').forEach(d => d.style.display = 'none');
+          const target = document.getElementById('tab-' + tabName);
+          if (target) target.style.display = 'block';
+        });
+      });
+
       // ── ROUTING ───────────────────────────────────────────────────────────
       const pages = document.querySelectorAll('.page');
       const links = document.querySelectorAll('[data-page-link]');
 
       function openPage(name) {
+        if (name === 'partner-dashboard' && !isPartnerLoggedIn()) {
+          name = 'partner-login';
+        }
+        if (name === 'partner-login' && isPartnerLoggedIn()) {
+          name = 'partner-dashboard';
+        }
         const target = document.getElementById('page-' + name);
         if (!target) return;
         pages.forEach(p => p.classList.remove('active'));
