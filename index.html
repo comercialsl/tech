@@ -351,6 +351,13 @@
             <option value="en">ENG</option>
             <option value="fr">FR</option>
           </select>
+          <div class="social-links" style="display:flex;gap:15px;align-items:center;margin-left:10px;">
+            <a href="#" class="social-link" aria-label="LinkedIn" id="header-linkedin" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-text-muted);transition:color 0.2s;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema"></button>
         </div>
       </nav>
@@ -416,122 +423,23 @@
         <p class="lead" data-i18n="svc.lead">Ofrecemos un abanico completo de servicios diseñados para cubrir cada aspecto de su infraestructura digital, con un enfoque en la fiabilidad y el rendimiento.</p>
       </div>
 
-      <div class="cards-grid">
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80&auto=format&fit=crop" alt="Cloud Soberana"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc1.tag">Infraestructura</span></div>
-            <h2 data-i18n="svc1.title">Cloud Soberana</h2>
-            <p class="muted" data-i18n="svc1.desc">Nube privada empresarial con recursos dedicados y arquitectura distribuida para máximo control y seguridad.</p>
-            <ul class="features">
-              <li data-i18n="svc1.f1">Recursos sin contención</li>
-              <li data-i18n="svc1.f2">Redundancia geográfica</li>
-              <li data-i18n="svc1.f3">Cumplimiento RGPD</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&auto=format&fit=crop" alt="Servidores Bare Metal"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc2.tag">Hardware</span></div>
-            <h2 data-i18n="svc2.title">Servidores Bare Metal</h2>
-            <p class="muted" data-i18n="svc2.desc">Servidores físicos dedicados de alto rendimiento con acceso root completo y almacenamiento NVMe Premium.</p>
-            <ul class="features">
-              <li data-i18n="svc2.f1">Hardware de última generación</li>
-              <li data-i18n="svc2.f2">Protección DDoS integrada</li>
-              <li data-i18n="svc2.f3">Backups automáticos</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80&auto=format&fit=crop" alt="Soluciones Sectoriales"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc3.tag">Vertical</span></div>
-            <h2 data-i18n="svc3.title">Soluciones Sectoriales</h2>
-            <p class="muted" data-i18n="svc3.desc">Tecnología adaptada a las necesidades específicas de cada sector: sanidad, industria, educación y servicios financieros.</p>
-            <ul class="features">
-              <li data-i18n="svc3.f1">Adaptación normativa sectorial</li>
-              <li data-i18n="svc3.f2">Integraciones verticales</li>
-              <li data-i18n="svc3.f3">Consultoría especializada</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80&auto=format&fit=crop" alt="Soluciones Colaborativas"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc4.tag">Productividad</span></div>
-            <h2 data-i18n="svc4.title">Soluciones Colaborativas</h2>
-            <p class="muted" data-i18n="svc4.desc">Plataformas de trabajo en equipo y comunicación unificada para organizaciones distribuidas con máxima seguridad.</p>
-            <ul class="features">
-              <li data-i18n="svc4.f1">Videoconferencia empresarial</li>
-              <li data-i18n="svc4.f2">Compartición segura de ficheros</li>
-              <li data-i18n="svc4.f3">Gestión de proyectos integrada</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&auto=format&fit=crop" alt="Agente Digital"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc5.tag">IA &amp; Digital</span></div>
-            <h2 data-i18n="svc5.title">Agente Digital (DAAS)</h2>
-            <p class="muted" data-i18n="svc5.desc">Transformación digital mediante asistentes virtuales inteligentes y automatización de flujos de trabajo con IA.</p>
-            <ul class="features">
-              <li data-i18n="svc5.f1">Asistentes virtuales 24/7</li>
-              <li data-i18n="svc5.f2">Automatización de procesos</li>
-              <li data-i18n="svc5.f3">Integración de sistemas</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&auto=format&fit=crop" alt="Ciberseguridad"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc6.tag">Seguridad</span></div>
-            <h2 data-i18n="svc6.title">Ciberseguridad Avanzada</h2>
-            <p class="muted" data-i18n="svc6.desc">Protección multinivel frente a amenazas digitales con monitorización proactiva y blindaje de red corporativa.</p>
-            <ul class="features">
-              <li data-i18n="svc6.f1">Detección de intrusiones</li>
-              <li data-i18n="svc6.f2">Gestión de identidades</li>
-              <li data-i18n="svc6.f3">Auditorías periódicas</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80&auto=format&fit=crop" alt="Telecomunicaciones"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc7.tag">Conectividad</span></div>
-            <h2 data-i18n="svc7.title">Telecomunicaciones Unificadas</h2>
-            <p class="muted" data-i18n="svc7.desc">Soluciones modernas integrando voz, datos y líneas móviles corporativas con cobertura global.</p>
-            <ul class="features">
-              <li data-i18n="svc7.f1">Centralitas virtuales</li>
-              <li data-i18n="svc7.f2">Líneas móviles 5G</li>
-              <li data-i18n="svc7.f3">Voz IP profesional</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="Hosting Profesional"></div>
-          <div class="card-content">
-            <div class="card-top"><span class="tag" data-i18n="svc8.tag">Web</span></div>
-            <h2 data-i18n="svc8.title">Hosting Profesional</h2>
-            <p class="muted" data-i18n="svc8.desc">Alojamiento web de alto rendimiento optimizado con tecnología NVMe SSD y seguridad antimalware.</p>
-            <ul class="features">
-              <li data-i18n="svc8.f1">Panel de control intuitivo</li>
-              <li data-i18n="svc8.f2">SSL gratuito incluido</li>
-              <li data-i18n="svc8.f3">Migración sin coste</li>
-            </ul>
-          </div>
-        </article>
-      </div>
+      <ul class="methodology-list" style="margin-top: 2rem; margin-bottom: 3rem;">
+        <li class="method-item">
+          <h3 data-i18n="svc.new1">Servicios corporativos, consultoría e implementación de IA</h3>
+          <p class="muted" data-i18n="svc.new1.desc">Impulsamos la transformación de su negocio mediante soluciones avanzadas de inteligencia artificial.</p>
+        </li>
+        <li class="method-item">
+          <h3 data-i18n="svc.new2">Automatización de procesos</h3>
+          <p class="muted" data-i18n="svc.new2.desc">Optimizamos flujos de trabajo operativos para maximizar la eficiencia y reducir costes.</p>
+        </li>
+        <li class="method-item">
+          <h3 data-i18n="svc.new3">Definición del espacio de datos en función de cada sector</h3>
+          <p class="muted" data-i18n="svc.new3.desc">Estructuramos y protegemos sus datos adaptándonos a las normativas de su industria.</p>
+        </li>
+      </ul>
     </section>
 
-    <!-- VENTAJAS -->
+    <!-- VENTAJAS --><!-- VENTAJAS -->
     <section class="page" id="page-ventajas" aria-labelledby="titulo-ventajas">
       <div style="max-width: 800px;">
         <span class="eyebrow" data-i18n="ben.eyebrow">Diferenciación</span>
@@ -851,8 +759,8 @@
           <a href="#servicios" data-page-link="servicios" class="footer-link" style="font-size: 0.65rem;" data-i18n="footer.services">Servicios</a>
           <a href="#ventajas" data-page-link="ventajas" class="footer-link" style="font-size: 0.65rem;" data-i18n="footer.methodology">Metodología</a>
           <a href="#contacto" data-page-link="contacto" class="footer-link" style="font-size: 0.65rem;" data-i18n="footer.contact">Contacto</a>
-          <a href="#" class="footer-link" aria-label="LinkedIn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <a href="#" class="footer-link" aria-label="LinkedIn" id="footer-linkedin" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-text-muted);transition:color 0.2s;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-text-muted)'">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
@@ -886,6 +794,9 @@
           'home.val4.title': 'Innovación con IA', 'home.val4.desc': 'Implementación de agentes digitales inteligentes y automatización avanzada para optimizar sus procesos de negocio.',
           'svc.eyebrow': 'Portafolio de Soluciones', 'svc.h1': 'Servicios IT Gestionados',
           'svc.lead': 'Ofrecemos un abanico completo de servicios diseñados para cubrir cada aspecto de su infraestructura digital, con un enfoque en la fiabilidad y el rendimiento.',
+          'svc.new1': 'Servicios corporativos, consultoría e implementación de IA', 'svc.new1.desc': 'Impulsamos la transformación de su negocio mediante soluciones avanzadas de inteligencia artificial.',
+          'svc.new2': 'Automatización de procesos', 'svc.new2.desc': 'Optimizamos flujos de trabajo operativos para maximizar la eficiencia y reducir costes.',
+          'svc.new3': 'Definición del espacio de datos en función de cada sector', 'svc.new3.desc': 'Estructuramos y protegemos sus datos adaptándonos a las normativas de su industria.',
           'svc1.tag': 'Infraestructura', 'svc1.title': 'Cloud Soberana', 'svc1.desc': 'Nube privada empresarial con recursos dedicados y arquitectura distribuida para máximo control y seguridad.', 'svc1.f1': 'Recursos sin contención', 'svc1.f2': 'Redundancia geográfica', 'svc1.f3': 'Cumplimiento RGPD',
           'svc2.tag': 'Hardware', 'svc2.title': 'Servidores Bare Metal', 'svc2.desc': 'Servidores físicos dedicados de alto rendimiento con acceso root completo y almacenamiento NVMe Premium.', 'svc2.f1': 'Hardware de última generación', 'svc2.f2': 'Protección DDoS integrada', 'svc2.f3': 'Backups automáticos',
           'svc3.tag': 'Vertical', 'svc3.title': 'Soluciones Sectoriales', 'svc3.desc': 'Tecnología adaptada a las necesidades específicas de cada sector: sanidad, industria, educación y servicios financieros.', 'svc3.f1': 'Adaptación normativa sectorial', 'svc3.f2': 'Integraciones verticales', 'svc3.f3': 'Consultoría especializada',
@@ -955,6 +866,9 @@
           'home.val4.title': 'AI Innovation', 'home.val4.desc': 'Implementation of intelligent digital agents and advanced automation to optimize your business processes.',
           'svc.eyebrow': 'Solutions Portfolio', 'svc.h1': 'Managed IT Services',
           'svc.lead': 'We offer a comprehensive range of services designed to cover every aspect of your digital infrastructure, with a focus on reliability and performance.',
+          'svc.new1': 'Corporate services, AI consulting and implementation', 'svc.new1.desc': 'We drive your business transformation through advanced artificial intelligence solutions.',
+          'svc.new2': 'Process automation', 'svc.new2.desc': 'We optimize operational workflows to maximize efficiency and reduce costs.',
+          'svc.new3': 'Definition of data space depending on each sector', 'svc.new3.desc': 'We structure and protect your data adapting to your industry regulations.',
           'svc1.tag': 'Infrastructure', 'svc1.title': 'Sovereign Cloud', 'svc1.desc': 'Private enterprise cloud with dedicated resources and distributed architecture for maximum control and security.', 'svc1.f1': 'Contention-free resources', 'svc1.f2': 'Geographic redundancy', 'svc1.f3': 'GDPR compliance',
           'svc2.tag': 'Hardware', 'svc2.title': 'Bare Metal Servers', 'svc2.desc': 'High-performance dedicated physical servers with full root access and premium NVMe storage.', 'svc2.f1': 'Latest generation hardware', 'svc2.f2': 'Integrated DDoS protection', 'svc2.f3': 'Automatic backups',
           'svc3.tag': 'Vertical', 'svc3.title': 'Sector Solutions', 'svc3.desc': 'Technology adapted to the specific needs of each sector: healthcare, industry, education and financial services.', 'svc3.f1': 'Sector regulatory compliance', 'svc3.f2': 'Vertical integrations', 'svc3.f3': 'Specialized consulting',
@@ -1024,6 +938,9 @@
           'home.val4.title': 'Innovation avec IA', 'home.val4.desc': "Déploiement d'agents numériques intelligents et d'automatisation avancée pour optimiser vos processus métier.",
           'svc.eyebrow': 'Portefeuille de Solutions', 'svc.h1': 'Services IT Gérés',
           'svc.lead': 'Nous offrons une gamme complète de services conçus pour couvrir chaque aspect de votre infrastructure numérique, avec un accent sur la fiabilité et la performance.',
+          'svc.new1': 'Services d\'entreprise, conseil et mise en œuvre de l\'IA', 'svc.new1.desc': 'Nous propulsons la transformation de votre entreprise grâce à des solutions d\'intelligence artificielle avancées.',
+          'svc.new2': 'Automatisation des processus', 'svc.new2.desc': 'Nous optimisons les flux de travail opérationnels pour maximiser l\'efficacité et réduire les coûts.',
+          'svc.new3': 'Définition de l\'espace de données en fonction de chaque secteur', 'svc.new3.desc': 'Nous structurons et protégeons vos données en nous adaptant aux réglementations de votre secteur.',
           'svc1.tag': 'Infrastructure', 'svc1.title': 'Cloud Souverain', 'svc1.desc': "Cloud privé d'entreprise avec des ressources dédiées et une architecture distribuée pour un contrôle et une sécurité maximaux.", 'svc1.f1': 'Ressources sans contention', 'svc1.f2': 'Redondance géographique', 'svc1.f3': 'Conformité RGPD',
           'svc2.tag': 'Matériel', 'svc2.title': 'Serveurs Bare Metal', 'svc2.desc': 'Serveurs physiques dédiés haute performance avec accès root complet et stockage NVMe Premium.', 'svc2.f1': 'Matériel dernière génération', 'svc2.f2': 'Protection DDoS intégrée', 'svc2.f3': 'Sauvegardes automatiques',
           'svc3.tag': 'Vertical', 'svc3.title': 'Solutions Sectorielles', 'svc3.desc': 'Technologie adaptée aux besoins spécifiques de chaque secteur : santé, industrie, éducation et services financiers.', 'svc3.f1': 'Conformité réglementaire sectorielle', 'svc3.f2': 'Intégrations verticales', 'svc3.f3': 'Conseil spécialisé',
